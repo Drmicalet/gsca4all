@@ -8,7 +8,6 @@
 #' @docType package
 #' @name gsca_elastic
 #' @author Dr. Miguel Mayol-Tur Ph.D. <m00mayoltur@gmail.com>
-#' @author AI Research Assistant <Qwen3-235B-A22B-2507>
 #' @version 1.1.0
 #' @date 2025-11-29
 #' @doi 10.5281/zenodo.17155474
@@ -29,10 +28,10 @@
 #' @examples
 #' \dontrun{
 #' # Load the package
-#' library(gsca_ridge)
+#' library(gsca4all)
 #'
 #' # Load UTAUT data
-#' data_path <- system.file("extdata", "utaut_data.csv", package = "gsca_ridge")
+#' data_path <- system.file("extdata", "utaut_data.csv", package = "gsca4all")
 #' 
 #' # Check if file exists (it should in the package)
 #' if (data_path != "") {
@@ -125,7 +124,7 @@
 #' \dontrun{
 #' # See package examples for usage
 #' }
-gsca_elastic <- function(data,
+gsca4all <- function(data,
                       measurement_model,
                       structural_model,
                       alpha = 0,
@@ -432,7 +431,7 @@ gsca_elastic <- function(data,
       boot_data <- data[boot_indices, , drop = FALSE]
       
       # Fit model to bootstrap sample
-      boot_model <- gsca_elastic(
+      boot_model <- gsca4all(
         data = boot_data,
         measurement_model = measurement_model,
         structural_model = structural_model,
@@ -465,7 +464,7 @@ gsca_elastic <- function(data,
   }
   
   # Class for S3 methods
-  class(results) <- "gsca_elastic"
+  class(results) <- "gsca4all"
   
   return(results)
 }
@@ -474,12 +473,12 @@ gsca_elastic <- function(data,
 #'
 #' Prints a summary of GSCA model results in tabular format similar to mmt.pdf.
 #'
-#' @param x An object of class "gsca_elastic" returned by gsca_elastic()
+#' @param x An object of class "gsca4all" returned by gsca_elastic()
 #' @param ... Additional arguments (not used)
 #'
-#' @method print gsca_elastic
+#' @method print gsca4all
 #' @export
-print.gsca_elastic <- function(x, ...) {
+print.gsca4all <- function(x, ...) {
   cat("GSCA Model Results with Elastic Net Regularization\n")
   cat("===========================================\n\n")
   
@@ -567,25 +566,25 @@ print.gsca_elastic <- function(x, ...) {
 #'
 #' Provides a detailed summary of GSCA model results in tabular format.
 #'
-#' @param object An object of class "gsca_elastic" returned by gsca_elastic()
+#' @param object An object of class "gsca4all" returned by gsca_elastic()
 #' @param ... Additional arguments (not used)
 #'
-#' @method summary gsca_elastic
+#' @method summary gsca4all
 #' @export
-summary.gsca_elastic <- function(object, ...) {
-  print.gsca_elastic(object, ...)
+summary.gsca4all <- function(object, ...) {
+  print.gsca4all(object, ...)
 }
 
 #' Plot GSCA Results
 #'
 #' Creates a path diagram of the GSCA model.
 #'
-#' @param x An object of class "gsca_elastic" returned by gsca_elastic()
+#' @param x An object of class "gsca4all" returned by gsca_elastic()
 #' @param ... Additional arguments (not used)
 #'
-#' @method plot gsca_elastic
+#' @method plot gsca4all
 #' @export
-plot.gsca_elastic <- function(x, ...) {
+plot.gsca4all <- function(x, ...) {
   # This would typically use DiagrammeR or similar package
   # For simplicity, we'll just print instructions
   

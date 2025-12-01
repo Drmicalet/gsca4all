@@ -17,8 +17,8 @@ structural_model_Aplus <- list(
   Satisfaction = c("Improvement", "Information")
 )
 
-# Fit Model A+ with Ridge regularization
-results_Aplus <- gsca_ridge(
+# Fit Model A+ with Elastic Net (Ridge default)
+results_Aplus <- gsca_elastic(
   data = data,
   measurement_model = model_spec_Aplus,
   structural_model = structural_model_Aplus,

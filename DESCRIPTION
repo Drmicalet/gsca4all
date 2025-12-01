@@ -1,27 +1,14 @@
-Package: gsca_ridge
+Package: gsca4all
 Title: Generalized Structured Component Analysis with Elastic Net Regularization
 Version: 1.1.0
-Authors@R: c(
-  person("Miguel", "Mayol-Tur", email = "m00mayoltur@gmail.com", role = c("aut", "cre")),
-  person("Qwen3-235B-A22B-2507", "AI Research Assistant", role = c("aut"))
-)
-Description: Implements Generalized Structured Component Analysis (GSCA) with Elastic Net regularization 
-  (Ridge, Lasso, and mixtures) for structural equation modeling. The package provides tools for estimating 
-  model parameters with improved stability through regularization, following the Alternating Least Squares (ALS) 
-  procedure. Suitable for composite-based SEM in social sciences, hospitality research, and 
-  other fields requiring robust latent variable modeling.
+Authors@R: c(person("Miguel", "Mayol-Tur", email = "m00mayoltur@gmail.com", role = c("aut", "cre")))
+Description: Implements Generalized Structured Component Analysis (GSCA) with Elastic Net regularization (Ridge, Lasso, and mixtures) for structural equation modeling. The package provides tools for estimating model parameters with improved stability through regularization, following the Alternating Least Squares (ALS) procedure. Suitable for composite-based SEM in social sciences, hospitality research, and other fields requiring robust latent variable modeling.
 Depends: R (>= 3.5.0)
-Imports: 
-    glmnet (>= 4.1),
-    stats,
-    utils
-Suggests: 
-    knitr,
-    rmarkdown,
-    testthat (>= 3.0.0)
+Imports: glmnet (>= 4.1), stats, utils
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 License: file LICENSE
-URL: https://github.com/Drmicalet/library-gsca_ridge
-BugReports: https://github.com/Drmicalet/library-gsca_ridge/issues
+URL: https://github.com/Drmicalet/library-gsca4all
+BugReports: https://github.com/Drmicalet/library-gsca4all/issues
 VignetteBuilder: knitr
 RoxygenNote: 7.2.3
 Encoding: UTF-8

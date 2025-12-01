@@ -1,4 +1,4 @@
-# GSCA with Ridge Regularization
+# gsca4all: Generalized Structured Component Analysis with Elastic Net Regularization
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17155474.svg)](https://doi.org/10.5281/zenodo.17155474)
 
@@ -6,11 +6,11 @@ An R package implementing Generalized Structured Component Analysis (GSCA) with 
 
 ## Overview
 
-This package provides a complete implementation of GSCA with Ridge regularization, following the Alternating Least Squares (ALS) procedure with Ridge penalty for improved stability and reduced multicollinearity. The implementation was developed for analyzing data from a survey of **190 hotel staff members** who responded to questions about ICT usage in their workplaces.
+This package provides a complete implementation of GSCA with Elastic Net regularization, following the Alternating Least Squares (ALS) procedure with Elastic Net penalty (Ridge + Lasso) for improved stability, variable selection, and reduced multicollinearity. The implementation was developed for analyzing data from a survey of **190 hotel staff members** who responded to questions about ICT usage in their workplaces.
 
 ## Features
 
-- Complete GSCA implementation with Ridge regularization
+- Complete GSCA implementation with Elastic Net regularization (Ridge, Lasso, and mixtures)
 - Support for both reflective and formative measurement models  
 - Bootstrap functionality for statistical inference
 - Comprehensive reliability assessment (rho_DG, AVE)
@@ -27,10 +27,10 @@ This package provides a complete implementation of GSCA with Ridge regularizatio
 
 ```r
 # Install development version from GitHub
-remotes::install_github("Drmicalet/library-gsca_ridge")
+remotes::install_github("Drmicalet/library-gsca4all")
 
 # Load the package
-library(gsca_ridge)
+library(gsca4all)
 ```
 
 ## Usage Example
@@ -116,12 +116,11 @@ The package includes multivariate outlier detection using Mahalanobis distance:
 To cite this package in publications:
 
 ```markdown
-Mayol-Tur, M., (2025). gsca_ridge: Generalized Structured Component Analysis with Ridge Regularization (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.17155474 https://github.com/Drmicalet/library-gsca_ridge/
-```
+Mayol-Tur, M., (2025). gsca4all: Generalized Structured Component Analysis with Elastic Net Regularization (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.17155474 https://github.com/Drmicalet/library-gsca4all/
 
-Mayol-Tur, M., (2025). gsca_ridge: Generalized Structured Component Analysis with Ridge Regularization (Version 1.0.0) [Computer software]. 
+Mayol-Tur, M., (2025). gsca4all: Generalized Structured Component Analysis with Elastic Net Regularization (Version 1.0.0) [Computer software]. 
 
-https://doi.org/10.5281/zenodo.17155474 https://github.com/Drmicalet/library-gsca_ridge/
+https://doi.org/10.5281/zenodo.17155474 https://github.com/Drmicalet/library-gsca4all/
 
 ## Author
 
@@ -133,7 +132,7 @@ This package was developed as part of a paper revisiting with IA the doctoral th
 
 
 
-Assisted mainly by Qwen3-235B-A22B-2507 after it invented a non existing library to code the "better model than the human did", and faked its results, after confronting how did it made the calculations if the library does not exist yet, that now is this one.
+Assisted mainly by Qwen3-235B-A22B-2507, Agentic, and Gemini 1.5 Pro. Qwen initially hallucinated a non-existent library to code the "better model than the human did", which led to the creation of this actual package.
 
 ## License
 
